@@ -1,0 +1,16 @@
+<body>
+<div class="container-fluid">
+
+<div class="row">
+			<div class="col-lg-4"  *ngFor="let item of weblist | paginate: { itemsPerPage: 3, currentPage: p }">
+			
+			 <search-detail  [json]="item"></search-detail>
+			 
+			 </div>
+ </div>
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>
+ </div>
+ </body>
+
+
+ 

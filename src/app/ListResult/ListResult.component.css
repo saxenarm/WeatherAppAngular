@@ -1,0 +1,23 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #18323A;
+}
+.dhiruheading{
+  margin: 30px 10px;
+  background-color:#18323A; 
+  color: #343434;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;   
+  font-size: 70px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 5px white, 0 3px #777;
+}
+pagination-controls{
+  font-size: 30px;
+ text-align: center;
+}
+pagination-controls li{
+color: white;
+}

@@ -1,0 +1,25 @@
+
+<!-- <form class="navbar-form navbar-left">
+  <div class="form-group">
+ <input class="form-control" [(ngModel)]="selection" [ngModelOptions]="{standalone: true}" placeholder="Search by City" />
+
+  </div>
+  
+  <button class="btn btn-danger"  (click)="getWeather()">Search</button>
+</form> 
+<app-list *ngIf="MyWebData" [json]="MyWebData"></app-list>  -->
+
+
+
+
+
+<div class="container">
+  <form class="find-location">
+    <input class="form-control" [(ngModel)]="selection" [ngModelOptions]="{standalone: true}" placeholder="Search by City" />
+   
+  <button  class="btn btn-danger"  (click)="getWeather()">Search</button>
+  </form>
+
+</div>
+
+<app-list *ngIf="MyWebData" [json]="MyWebData"></app-list> 

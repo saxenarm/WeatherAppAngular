@@ -1,0 +1,53 @@
+<!-- <head>
+	
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+    -->
+
+<div class="container-fluid">
+
+		<span class="col-lg-4">
+			<div class="weather-card one">
+				<div class="top">
+					<div class="wrapper">
+						
+						<span><h1 class="heading">{{Data.discription}}</h1><img src="http://openweathermap.org/img/w/{{Data.icon}}.png"/></span>
+						<h2 class="location">{{Data.CityName}}</h2>
+						<h3 class="location">{{Data.DateTime}}</h3>
+						<p class="temp">
+							<span class="temp-value">{{Data.Temperature}}</span>
+							<span class="temp-value">K</span>
+						</p>
+					
+					</div>
+				
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+							<button type="button" class="btn btn-danger btn-circle btn-xl" (click)="addfavourite(Data)"><i class="glyphicon glyphicon-heart"></i></button>
+						<ul class="forecast">
+							<a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+							<li class="active">
+								<span class="date">WindSpeed :</span>
+								<span class="lnr condition">
+									<span class="temp">{{Data.Windspeed}}</span>
+								</span>
+							</li>
+							<li class="active">
+								<span class="date">Humidity :</span>
+								<span class="lnr lnr-sun condition">
+									<span class="temp">{{Data.Humidity}}</span><span class="temp-type">K</span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			
+			</div>
+			
+		</span>
+	</div>

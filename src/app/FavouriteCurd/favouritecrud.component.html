@@ -1,0 +1,72 @@
+<!-- <body>
+ <div class="container-fluid">
+		<div class="row">
+	   <div *ngFor="let item of MyFav | paginate: { itemsPerPage: 4, currentPage: p }">
+			<div class="[ col-xs-12  ]">
+				<ul class="event-list">
+					<li>
+						<time datetime="2014-07-20">
+							<span class="month">{{item.dateTime}}</span>
+						</time>
+						<img alt="icon" src="http://openweathermap.org/img/w/{{item.icon}}.png" />
+						<div class="info">
+							<h2 class="title">{{item.cityName}}</h2>
+							<h3 class="desc">{{item.discription}}</h3>
+							<p class="desc">Temperature :{{item.temperature}}K</p>
+							<p class="desc">Pressure :{{item.pressure}}</p>	
+						
+							<input class="col-sm-7" [(ngModel)]="commentline" placeholder="comment">
+							<button class="col-sm-2" (click)="comment(item,commentline)">Comment</button>
+							<button class="col-sm-2" (click)="delete(item.id)">Delete</button>
+									
+						</div>
+						
+					</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</body> -->
+
+<div align="center">
+<section class="container">
+		<h1>Your Favourites..</h1>
+		  <div class="row">
+				
+				<div *ngFor="let item of MyFav | paginate: { itemsPerPage: 2, currentPage: p }">
+			<article class="card fl-left">
+			  <section class="date">
+					<img alt="icon" src="http://openweathermap.org/img/w/{{item.icon}}.png" />
+					<h3>{{item.cityName}}</h3>
+			  </section>
+			  <section class="card-cont">
+				<h4>{{item.discription}}</h4>
+				<h3>{{item.cityName}}</h3>
+				<div class="even-date">
+				 <i class="fa fa-calendar"></i>
+				 <time>
+				   <h2>Temperature :{{item.temperature}}K</h2>
+				   <span>Pressure :{{item.pressure}}</span>
+				 </time>
+				</div>
+				<div class="even-info">
+				  <i class="fa fa-map-marker"></i>
+				  <p>
+						Windspeed: {{item.windspeed}}
+				  </p>
+				</div>
+				<input class="col-sm-5" [(ngModel)]="commentline" placeholder="comment">
+				<button class="col-sm-3" class="btn btn-danger" (click)="comment(item,commentline)">Comment</button>
+				<button class="col-sm-3" class="btn btn-primary " (click)="delete(item.id)">Delete</button>
+			  </section>
+			</article>
+			
+		  </div>
+		  </div> 
+	
+	
+	</section>
+	<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
